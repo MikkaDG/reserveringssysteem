@@ -1,0 +1,32 @@
+body {
+    background-color: RGB(220, 208, 255) !important;
+    height: 100vh !important;
+}
+
+.title {
+    font-family: 'Great Vibes' !important;
+    color: #c5aded !important;
+}
+
+.subtitle {
+    font-family: 'Great Vibes' !important;
+    color: black !important;
+    font-size: xxx-large;
+}
+
+#delete_button {
+    margin-top: -7px;
+}
+
+.image {
+    width: 25vw;
+}
+
+.imgSection {
+    margin-left: 65vw;
+    margin-top: -20vh;
+}
+
+#afspraakMaken {
+    margin-left: 15vw;
+}
