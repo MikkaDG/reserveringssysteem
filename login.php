@@ -67,16 +67,21 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/logoMK.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <title>Log in</title>
 </head>
 <body>
 <section class="section">
     <div class="container content">
-        <h2 class="title">Log in</h2>
+        <h2 class="subtitle">Log in</h2>
 
         <?php if ($login) { ?>
             <p>Je bent ingelogd!</p>
-            <p><a href="logout.php">Uitloggen</a> / <a href="index.php">Naar secure page</a></p>
+            <p><a href="logout.php">Uitloggen</a> / <a href="index.php">Naar afspraken</a></p>
         <?php } else { ?>
 
             <section class="columns">
@@ -127,7 +132,8 @@ if (isset($_POST['submit'])) {
                     <div class="field is-horizontal">
                         <div class="field-label is-normal"></div>
                         <div class="field-body">
-                            <button class="button is-link is-fullwidth" type="submit" name="submit">Log in With Email</button>
+                            <button class="button is-success is-fullwidth" type="submit" name="submit">Log in</button>
+                            <a class="button is-link is-fullwidth" href="register.php">Registreren</a>
                         </div>
                     </div>
 

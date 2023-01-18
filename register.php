@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['submit'])) {
     /** @var mysqli $db */
-    require_once "includes/database.php";
+    require_once "database.php";
 
     // Get form data
     $name = mysqli_escape_string($db, $_POST['name']);
@@ -49,13 +49,18 @@ if(isset($_POST['submit'])) {
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="img/logoMK.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/logoMK.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <title>Registreren</title>
 </head>
 <body>
 
 <section class="section">
     <div class="container content">
-        <h2 class="title">Register With Email</h2>
+        <h2 class="subtitle">Registeren</h2>
 
         <section class="columns">
             <form class="column is-6" action="" method="post">
