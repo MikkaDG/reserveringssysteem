@@ -93,12 +93,12 @@ mysqli_close($db);
     <div class="box">
         <section class="content">
             <ul>
-                <h1 class="subtitle">Reservering van <?= $afspraken['naam'] ?></h1>
-                <li>Telefoonnummer: 0<?= $afspraken['telefoonnummer'] ?></li>
-                <li>E-mailadres: <?= $afspraken['email'] ?></li>
-                <li>Datum en tijd: <?= $afspraken['datum_tijd'] ?></li>
-                <li>Behandeling: <?= $afspraken['behandeling'] ?></li>
-                <li>Extra info: <?= $afspraken['extra_info'] ?></li>
+                <h1 class="subtitle">Reservering van <?= htmlentities($afspraken['naam']) ?></h1>
+                <li>Telefoonnummer: 0<?= htmlentities($afspraken['telefoonnummer']) ?></li>
+                <li>E-mailadres: <?= htmlentities($afspraken['email']) ?></li>
+                <li>Datum en tijd: <?= htmlentities($afspraken['datum_tijd']) ?></li>
+                <li>Behandeling: <?= htmlentities($afspraken['behandeling']) ?></li>
+                <li>Extra info: <?= htmlentities($afspraken['extra_info']) ?></li>
             </ul>
         </section>
         <div class="is-flex-direction-row">

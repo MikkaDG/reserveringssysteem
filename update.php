@@ -120,7 +120,7 @@ mysqli_close($db);
                 <div class="field">
                     <label class="label">Naam</label>
                     <div class="control">
-                        <input class="input" name="naam" type="text" value="<?= $afspraken['naam'] ?>">
+                        <input class="input" name="naam" type="text" value="<?= htmlentities($afspraken['naam']) ?>">
                     </div>
                     <p class="help is-danger">
                         <?= $errors['naam'] ?? '' ?>
@@ -131,7 +131,7 @@ mysqli_close($db);
                     <label class="label" for="phone">Telefoonnummer</label>
                     <div class="control">
                         <input class="input" name="telefoonnummer" id="phone" type="tel"
-                               value="0<?= $afspraken['telefoonnummer'] ?>"
+                               value="0<?= htmlentities($afspraken['telefoonnummer']) ?>"
                         >
                     </div>
                     <p class="help is-danger">
@@ -142,7 +142,7 @@ mysqli_close($db);
                 <div class="field">
                     <label class="label">Email</label>
                     <div class="control">
-                        <input name="email" class="input" type="email" value="<?= $afspraken['email'] ?>">
+                        <input name="email" class="input" type="email" value="<?= htmlentities($afspraken['email']) ?>">
                     </div>
                     <p class="help is-danger">
                         <?= $errors['email'] ?? '' ?>
@@ -152,7 +152,7 @@ mysqli_close($db);
                 <div class="field">
                     <label class="label">Datum en tijd</label>
                     <div class="control">
-                        <input name="datum_tijd" class="input" type="datetime-local" value="<?= $afspraken['datum_tijd'] ?>">
+                        <input name="datum_tijd" class="input" type="datetime-local" value="<?= htmlentities($afspraken['datum_tijd']) ?>">
                     </div>
                     <p class="help is-danger">
                         <?= $errors['datum_tijd'] ?? '' ?>
@@ -162,7 +162,7 @@ mysqli_close($db);
                 <div class="field">
                     <label class="label">Behandeling</label>
                     <div class="control">
-                        <input class="input" name="behandeling" type="text" value="<?= $afspraken['behandeling'] ?>">
+                        <input class="input" name="behandeling" type="text" value="<?= htmlentities($afspraken['behandeling']) ?>">
                     </div>
                     <p class="help is-danger">
                         <?= $errors['behandeling'] ?? '' ?>
@@ -172,7 +172,7 @@ mysqli_close($db);
                 <div class="field">
                     <label class="label">Extra opmerking</label>
                     <div class="control">
-                        <input class="input" name="extra_info" type="text" value="<?= $afspraken['extra_info'] ?>">
+                        <input class="input" name="extra_info" type="text" value="<?= htmlentities($afspraken['extra_info']) ?>">
                     </div>
                 </div>
 

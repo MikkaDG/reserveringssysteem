@@ -75,13 +75,34 @@ if (isset($_POST['submit'])) {
     <title>Log in</title>
 </head>
 <body>
+<section class="hero is-small has-background-black">
+    <div class="hero-body">
+        <p class="title">
+            Miranda's Knipboetiek
+        </p>
+    </div>
+</section>
+
+<nav class="navbar has-background-black" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+            <img src="img/logoMK.jpg">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+</nav>
 <section class="section">
     <div class="container content">
         <h2 class="subtitle">Log in</h2>
 
         <?php if ($login) { ?>
             <p>Je bent ingelogd!</p>
-            <p><a href="logout.php">Uitloggen</a> / <a href="index.php">Naar afspraken</a></p>
+            <p><a class="button is-danger is-light" href="logout.php">Uitloggen</a> <a class="button is-success" href="index.php">Naar afspraken</a></p>
         <?php } else { ?>
 
             <section class="columns">

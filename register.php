@@ -57,6 +57,27 @@ if(isset($_POST['submit'])) {
     <title>Registreren</title>
 </head>
 <body>
+<section class="hero is-small has-background-black">
+    <div class="hero-body">
+        <p class="title">
+            Miranda's Knipboetiek
+        </p>
+    </div>
+</section>
+
+<nav class="navbar has-background-black" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+            <img src="img/logoMK.jpg">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+</nav>
 
 <section class="section">
     <div class="container content">
@@ -123,7 +144,8 @@ if(isset($_POST['submit'])) {
                 <div class="field is-horizontal">
                     <div class="field-label is-normal"></div>
                     <div class="field-body">
-                        <button class="button is-link is-fullwidth" type="submit" name="submit">Register</button>
+                        <a class="button is-light is-fullwidth" href="login.php">Terug naar inloggen</a>
+                        <button class="button is-link is-fullwidth" type="submit" name="submit">Registeren</button>
                     </div>
                 </div>
 

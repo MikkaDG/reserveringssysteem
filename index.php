@@ -1,6 +1,17 @@
 <?php
 /** @var mysqli $db */
 
+session_start();
+
+//May I even visit this page?
+if (!isset($_SESSION['loggedInUser'])) {
+    header("Location: login.php");
+    exit;
+}
+
+//Get email from session
+$name = $_SESSION['loggedInUser']['name'];
+
 //Require DB settings with connection variable
 require_once "database.php";
 
@@ -61,8 +72,9 @@ mysqli_close($db);
 
         <div class="navbar-end">
             <div class="navbar-item">
+                <a href="login.php">
                 <img src="img/user.png">
-                </img>
+                </a>
             </div>
         </div>
     </div>
@@ -90,15 +102,15 @@ mysqli_close($db);
         <tbody>
         <?php foreach ($afspraken as $index => $afspraakItem) { ?>
             <tr>
-                <td><?= $afspraakItem['naam'] ?></td>
-                <td>0<?= $afspraakItem['telefoonnummer'] ?></td>
-                <td><?= $afspraakItem['email'] ?></td>
-                <td><?= $afspraakItem['datum_tijd'] ?></td>
-                <td><?= $afspraakItem['behandeling'] ?></td>
-                <td><?= $afspraakItem['extra_info'] ?></td>
-                <td><a class="button" href="details.php?id=<?= $afspraakItem['id'] ?>">Details</a></td>
-                <td><a class="button is-warning is-light" href="update.php?id=<?= $afspraakItem['id'] ?>">Bewerken</a></td>
-                <td><a class="button is-danger" href="delete.php?id=<?= $afspraakItem['id'] ?>">Verwijderen</a></td>
+                <td><?= htmlentities($afspraakItem['naam']) ?></td>
+                <td>0<?= htmlentities($afspraakItem['telefoonnummer']) ?></td>
+                <td><?= htmlentities($afspraakItem['email']) ?></td>
+                <td><?= htmlentities($afspraakItem['datum_tijd']) ?></td>
+                <td><?= htmlentities($afspraakItem['behandeling']) ?></td>
+                <td><?= htmlentities($afspraakItem['extra_info']) ?></td>
+                <td><a class="button" href="details.php?id=<?= htmlentities($afspraakItem['id']) ?>">Details</a></td>
+                <td><a class="button is-warning is-light" href="update.php?id=<?= htmlentities($afspraakItem['id']) ?>">Bewerken</a></td>
+                <td><a class="button is-danger" href="delete.php?id=<?= htmlentities($afspraakItem['id']) ?>">Verwijderen</a></td>
             </tr>
         <?php } ?>
         </tbody>
