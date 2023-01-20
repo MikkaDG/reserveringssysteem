@@ -1,20 +1,3 @@
-<!--
-ALS op submit wordt gedrukt
-    Als data valide is
-        INSERT query opbouwen
-        Query uitvoeren op database
-        Als correct ingevuld
-            Redirect naar index.php
-        Als niet correct ingevuld
-            Foutmelding tonen
-    ALS Data niet valide
-        Formulier tonen
-        Geef error bij leeg veld
-        Data terugschrijven in form
-Niet op submit gedrukt
-    Leeg formulier tonen
-    -->
-
 <?php
 /** @var mysqli $db */
 

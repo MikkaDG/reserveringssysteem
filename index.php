@@ -108,9 +108,9 @@ mysqli_close($db);
                 <td><?= htmlentities($afspraakItem['datum_tijd']) ?></td>
                 <td><?= htmlentities($afspraakItem['behandeling']) ?></td>
                 <td><?= htmlentities($afspraakItem['extra_info']) ?></td>
-                <td><a class="button" href="details.php?id=<?= htmlentities($afspraakItem['id']) ?>">Details</a></td>
-                <td><a class="button is-warning is-light" href="update.php?id=<?= htmlentities($afspraakItem['id']) ?>">Bewerken</a></td>
-                <td><a class="button is-danger" href="delete.php?id=<?= htmlentities($afspraakItem['id']) ?>">Verwijderen</a></td>
+                <td><a class="button" href="details.php?id=<?= $afspraakItem['id'] ?>">Details</a></td>
+                <td><a class="button is-warning is-light" href="update.php?id=<?= $afspraakItem['id'] ?>">Bewerken</a></td>
+                <td><a class="button is-danger" href="delete.php?id=<?= $afspraakItem['id'] ?>">Verwijderen</a></td>
             </tr>
         <?php } ?>
         </tbody>
